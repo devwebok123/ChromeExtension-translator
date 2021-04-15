@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Kiwi</title>
+    <!--ссылаемся на шрифты, используемые в документе-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--здесь мы ссылаемся на стили, которые будем использовать в документе, а именно стиль иконок-->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Karla:400,700%7CLora:700&amp;display=swap"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/content.css" />
+  </head>
+  <body style="padding-top: calc(50px + 0.5rem)">
+    <div class="modal-header">
+      <img style="width: 110px; margin-left: 16px" src="image/logo-ext.png" />
+      <h1 style="position: relative; top: 2px; left: 16px" id="title"></h1>
+      <button class="closeBtn">
+        <svg
+          class="MuiSvgIcon-root jss3 css-qpr50k"
+          focusable="false"
+          viewBox="0 0 16 16"
+          aria-hidden="true"
+        >
+          <path
+            d="M10.375 7.975L15.775 2.625C16.075 2.325 16.075 1.775 15.775 1.475L14.525 0.225C14.225 -0.075 13.675 -0.075 13.375 0.225L8.025 5.625L2.625 0.225C2.325 -0.075 1.775 -0.075 1.475 0.225L0.225 1.475C-0.075 1.775 -0.075 2.325 0.225 2.625L5.625 7.975L0.225 13.375C-0.075 13.675 -0.075 14.225 0.225 14.525L1.475 15.775C1.775 16.075 2.325 16.075 2.625 15.775L8.025 10.375L13.375 15.775C13.675 16.075 14.225 16.075 14.525 15.775L15.775 14.525C16.075 14.225 16.075 13.675 15.775 13.375L10.375 7.975Z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <!--
+    	<div id="accessSettings" class="topBlueAlert block-to-hide"></div>
+    -->
+    <div class="topBlueAlert" id="allowAccess" style="display: none">
+      <h5 id="allowAccessText1"></h5>
+      <h5 id="allowAccessText2"></h5>
+      <button id="allow_access">Allow Access</button>
+    </div>
+    <div class="modal-content">
+      <div class="block-to-hide" id="start-block">
+        <!--
+            	<img style="width: 56px;margin-bottom: 16px;" src="image/lamp-with-laptop.svg">
+            -->
+        <h3 class="saveProgress"></h3>
+        <p id="registerOrLogin"></p>
+        <a
+          class="greenButton googleAuthButton"
+          href="https://api.dokiwi.com/api/google-auth"
+          target="popup"
+        ></a>
+        <div
+          class="grayOutlineButton registerButton"
+          id="showRegisterForm"
+        ></div>
+        <div style="margin-top: 16px; text-align: center; width: 100%">
+          <h5 class="loginButtonText"></h5>
+          <h5 class="loginButtonLink blueLink" id="showLoginForm"></h5>
+        </div>
+      </div>
+
+      <div id="wordsets" class="hidden">
+        <p id="wordsets-label">Word Sets</p>
+
+        <label class="customcheck"
+          ><p>A0 (&lt;300)</p>
+          <input type="checkbox" name="wordset" value="1" checked="checked" />
+          <span class="checkmark2"></span>
+        </label>
+        <label class="customcheck"
+          ><p>A1 (300-600)</p>
+          <input type="checkbox" name="wordset" value="2" />
+          <span class="checkmark2"></span>
+        </label>
+        <label class="customcheck"
+          ><p>A2 (600-1200)</p>
+          <input type="checkbox" name="wordset" value="4" />
+          <span class="checkmark2"></span>
+        </label>
+        <label class="customcheck"
+          ><p>B1 (1200-2500)</p>
+          <input type="checkbox" name="wordset" value="8" />
+          <span class="checkmark2"></span>
+        </label>
+        <label class="customcheck"
+          ><p>B2 (2500-5000)</p>
+          <input type="checkbox" name="wordset" value="16" />
+          <span class="checkmark2"></span>
+        </label>
+        <label class="customcheck"
+          ><p>C1 (5000-10000)</p>
+          <input type="checkbox" name="wordset" value="32" />
+          <span class="checkmark2"></span>
+        </label>
+      </div>
+
+      <div class="btn-group hidden block-to-hide" id="settings">
+        <div class="preExtensionIsOn">
+          <div class="numOfTrans">
+            <p class="translationsNumber">Número de traduções</p>
+            <label class="container">
+              <div class="textHolder">
+                <p class="title" id="popupLess"></p>
+                <h5 class="desc" id="popupLessDesc"></h5>
+              </div>
+              <input type="radio" name="level" value="1" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <div class="textHolder">
+                <p class="title" id="popupMore"></p>
+                <h5 class="desc" id="popupMoreDesc"></h5>
+              </div>
+              <input type="radio" name="level" value="2" checked />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <div class="textHolder">
+                <p class="title" id="popupMany"></p>
+                <h5 class="desc" id="popupManyDesc"></h5>
+              </div>
+              <input type="radio" name="level" value="3" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          <div>
+            <div style="display: flex; align-items: center">
+              <div id="goal-label" class="goal-label" style="flex: 10">
+                Today's Goal
+              </div>
+              <div
+                id="goal-value"
+                class="goal-label"
+                style="flex: 9; text-align: right"
+              >
+                181/500 words
+              </div>
+            </div>
+            <progress id="translationProgress" value="0" max="100"></progress>
+          </div>
+
+          <hr class="hrStyle1" />
+
+          <div class="Toggler">
+            <input type="checkbox" id="highlightEnabled" class="hidden" />
+            <div class="toggle toggle_on" for="highlightEnabled">
+              <div></div>
+            </div>
+            <label class="highlight-enabled-label">
+              <p class="highlight-enabled-text"></p>
+            </label>
+          </div>
+
+          <div class="Toggler">
+            <input type="checkbox" id="siteEnabled" class="hidden" />
+            <div class="toggle toggle_on" for="siteEnabled"><div></div></div>
+            <label class="site-enabled-label">
+              <p class="site-enabled-text"></p>
+              <span class="site-enabled-domain"></span>
+              <h5 class="site-enabled-small-text"></h5>
+            </label>
+          </div>
+        </div>
+
+        <img
+          id="sleepKiwi"
+          src="image/sleep-kiwi.png"
+          style="width: 50%; transform: translateX(50%); display: none"
+        />
+        <div class="Toggler">
+          <input type="checkbox" id="extensionIsOn" class="hidden" />
+          <div class="toggle toggle_on" for="extensionIsOn"><div></div></div>
+          <label class="extension-is-on-label">
+            <p class="extension-is-on-text"></p>
+            <h5 class="extension-is-on-small-text"></h5>
+          </label>
+          <button class="hidden editDuration">Edit duration</button>
+          <div class="hidden selectDuration">
+            <div class="select-duration-dropdown">
+              <p class="select-duration-text"></p>
+              <select class="select-duration-list">
+                <option value="5" selected></option>
+                <option value="10"></option>
+                <option value="30"></option>
+                <option value="-1"></option>
+              </select>
+              <svg focusable="false" viewBox="0 0 16 16" aria-hidden="true">
+                <path
+                  d="M15.8138 8.2506C16.0621 8.00894 16.0621 7.61261 15.8138 7.37095L14.1657 5.77597C13.9175 5.53431 13.5203 5.53431 13.2721 5.77597L8 10.9089L2.72789 5.77597C2.47968 5.53431 2.08253 5.53431 1.83432 5.77597L0.186162 7.37095C-0.062054 7.61261 -0.062054 8.00894 0.186162 8.2506L7.55321 15.4135C7.80143 15.6551 8.19857 15.6551 8.44679 15.4135L15.8138 8.2506Z"
+                ></path>
+              </svg>
+            </div>
+            <div class="blueButton confirm-duration-button"></div>
+          </div>
+        </div>
+        <hr class="hrStyle1" />
+        <div style="text-align: center; margin-top: 24px">
+          <a href="https://app.dokiwi.com/settings-anonymous" target="_blank"
+            ><div class="blueLink2" id="dashboard_link"></div
+          ></a>
+          &nbsp&nbsp•&nbsp&nbsp
+          <a href="https://dokiwi.com/contact.html" target="_blank"
+            ><div class="blueLink2" id="feedback_link"></div
+          ></a>
+        </div>
+      </div>
+
+      <form id="registerForm" class="hidden block-to-hide">
+        <!--
+            	<img style="width: 56px;margin-bottom: 16px;" src="image/lamp-with-laptop.svg">
+            -->
+        <h1 class="saveProgress"></h1>
+        <div id="registerText"></div>
+        <div class="error alert-danger form-error"></div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control nameLabelInput"
+            id="name"
+            name="name"
+          />
+          <div class="error alert-danger"></div>
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            placeholder="E-mail"
+            class="form-control"
+            name="email"
+          />
+          <div class="error alert-danger"></div>
+        </div>
+        <div class="form-group" style="margin-bottom: 16px">
+          <input
+            type="password"
+            minlength="8"
+            class="form-control passwordLabelInput"
+            id="register_password"
+            name="password"
+          />
+          <div class="charMinDiv"></div>
+          <div class="error alert-danger"></div>
+        </div>
+        <button type="submit" class="blueButton registerButton"></button>
+        <div style="text-align: center">
+          <div class="blueLink back"></div>
+        </div>
+      </form>
+      <form id="loginForm" class="hidden block-to-hide">
+        <!--
+        		<img style="width: 56px;margin-bottom: 16px;" src="image/lamp-with-laptop.svg">
+            -->
+        <h1 id="welcomeBack"></h1>
+        <p id="loginText"></p>
+        <div class="error alert-danger form-error"></div>
+        <div class="alert-success block-to-hide" id="login-form-message"></div>
+        <div class="form-group">
+          <input
+            type="email"
+            placeholder="E-mail"
+            class="form-control"
+            id="email"
+            name="email"
+          />
+          <div class="error alert-danger"></div>
+        </div>
+        <div class="form-group" style="margin-bottom: 16px">
+          <input
+            type="password"
+            minlength="8"
+            class="form-control passwordLabelInput"
+            id="password"
+            name="password"
+          />
+          <div class="error alert-danger"></div>
+        </div>
+        <button type="submit" class="loginButtonLink blueButton"></button>
+        <div style="text-align: center">
+          <div class="back blueLink"></div>
+          &nbsp&nbsp•&nbsp&nbsp
+          <div class="forgotPassLink blueLink"></div>
+        </div>
+      </form>
+      <form id="resetPasswordForm" class="hidden block-to-hide">
+        <p id="resetPasswordText"></p>
+        <div class="error alert-danger form-error"></div>
+        <div class="form-group">
+          <input
+            type="email"
+            placeholder="E-mail"
+            class="form-control"
+            name="email"
+          />
+          <div class="error alert-danger"></div>
+        </div>
+        <button
+          type="submit"
+          class="blueButton"
+          id="resetPasswordButton"
+        ></button>
+      </form>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script
+      src="js/bootstrap.bundle.min.js"
+      integrity="sha384-6w2zaS9GxStQ7IqGp/EYemqdqNnPM8oqqKg61lNYz5++RS7OEBoAkBij0vNl1eAr"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/mixpanel.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

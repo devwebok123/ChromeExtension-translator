@@ -1,0 +1,621 @@
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    width: 380px;
+}
+/*задаём настройки для заголовков первого уровня*/
+h1 {
+    font-family: 'Menlo', monospace;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+    color: #2f5876;
+}
+a:link,
+a:visited {
+    color: #000000;
+    outline: 0;
+    text-decoration: none;
+}
+/*задаём ширину картинки*/
+/*img {
+    width: 30px;
+}*/
+.modal-header {
+    align-items: center; /*выравнивание элементов по центру*/
+    border-bottom: 0.5px solid #dadada; /*свойства нижней разделительной линии*/
+    height: 50px;
+    padding: 2rem 1rem;
+    justify-content: left;
+    border-bottom-width: 0;
+    position: fixed;
+    z-index: 3;
+    background: white;
+    top: 0;
+    width: 100%;
+}
+.modal-header .closeBtn {
+    position: absolute;
+    right: 16px;
+    background: none;
+    border: 0;
+    outline: 0;
+    margin: 0;
+}
+.modal-header .closeBtn svg {
+    color: rgb(205, 205, 205);
+    width: 16px;
+    height: 16px;
+}
+.topBlueAlert {
+    width: 100%;
+    background-color: rgb(207, 236, 245);
+    padding: 16px 32px;
+    color: rgb(50, 60, 70);
+    font-size: 14px;
+    font-family: Karla, sans-serif;
+    font-weight: normal;
+    line-height: 140%;
+    letter-spacing: 0px;
+}
+#allowAccess #allowAccessText1 {
+    color: rgb(50, 60, 70);
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0px;
+}
+#allowAccess #allowAccessText2 {
+    margin: 0;
+    margin-top: 4px;
+    color: rgb(50, 60, 70);
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 140%;
+    letter-spacing: 0px;
+}
+button {
+    margin-top: 8px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: rgb(63, 116, 148);
+    display: block;
+    font-weight: bold;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+button:hover {
+    opacity: 0.6;
+}
+#registerText {
+    margin-bottom: 32px;
+}
+.modal-content {
+    padding: 32px;
+    padding-bottom: 28px;
+    padding-top: 16px;
+}
+.modal-content .saveProgress,
+.modal-content #welcomeBack {
+    color: rgb(22, 22, 22);
+    font-size: 36px;
+    font-family: Lora, serif;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0px;
+    margin: 0;
+    margin-bottom: 16px;
+}
+.modal-content #registerOrLogin,
+.modal-content #loginText {
+    color: rgb(50, 50, 50);
+    font-size: 16px;
+    font-family: Karla, sans-serif;
+    font-weight: normal;
+    line-height: 140%;
+    letter-spacing: 0px;
+    margin-bottom: 32px;
+}
+.words_parser_logo {
+    padding: 16px; /*отступы со всех сторон*/
+}
+.blue-bordered {
+    background-color: white !important;
+    border-color: #0569ff !important;
+    color: #0569ff;
+}
+.blue-bordered:hover {
+    color: #0569ff; !important;
+}
+.blue-bordered.active {
+    background-color: #0569ff !important;
+}
+.modal-content {
+    border-width: 0;
+}
+.hidden {
+    display: none;
+}
+
+#settings .Toggler {
+    margin: 24px 0;
+}
+
+#settings .numOfTrans {
+    margin-bottom: 12px;
+}
+#settings .numOfTrans p {
+    color: rgb(22, 22, 22);
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0px;
+}
+#settings .numOfTrans .container {
+    display: block;
+    height: 24px;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#settings .numOfTrans .container .textHolder {
+    display: flex;
+    -webkit-box-align: baseline;
+    align-items: baseline;
+}
+#settings .numOfTrans .container .title {
+    display: inline-block;
+    color: rgb(22, 22, 22);
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0px;
+    margin: 0;
+    margin-top: 1px;
+}
+#settings .numOfTrans .container .desc {
+    display: inline-block;
+    color: rgb(125, 125, 125);
+    margin: 0;
+    margin-left: 8px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 140%;
+    letter-spacing: 0px;
+}
+#settings .numOfTrans .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+#settings .numOfTrans .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    border: 1px solid #cecece;
+    border-radius: 50%;
+}
+#settings .numOfTrans .container input:checked ~ .checkmark {
+    
+}
+#settings .numOfTrans .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+#settings .numOfTrans .container input:checked ~ .checkmark:after {
+    display: block;
+}
+#settings .numOfTrans .container .checkmark:after {
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #3ea39a;
+}
+
+.hrStyle1 {
+    border-top: 1px solid rgba(205, 205, 205);
+    height: 1px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+    margin: 0px;
+}
+#saveProgress {
+    font-weight: bold;
+    color: black;
+}
+.greenButton {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 8px;
+    background-color: rgb(62, 163, 154);
+    color: #FFFFFF!important;
+    padding: 16px;
+    font-size: 14px;
+    min-width: 64px;
+    box-sizing: border-box;
+    font-family: "Karla",sans-serif;
+    font-weight: 700;
+    line-height: 120%;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    display: inline-flex;
+    outline: 0;
+    position: relative;
+    align-items: center;
+    user-select: none;
+    vertical-align: middle;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.greenButton:hover {
+    background-color: rgb(101, 195, 188)
+}
+.grayOutlineButton {
+    width: 100%;
+    margin: 0;
+    color: #7D7D7D;
+    padding: 16px 40px;
+    font-size: 14px;
+    min-width: 64px;
+    box-sizing: border-box;
+    font-family: "Karla",sans-serif;
+    font-weight: 700;
+    line-height: 120%;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    display: inline-flex;
+    outline: 0;
+    position: relative;
+    align-items: center;
+    user-select: none;
+    vertical-align: middle;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 2px #7D7D7D;
+    transition: 0.2s;
+}
+.grayOutlineButton:hover {
+    background-color: #EBEBEB;
+}
+.loginButtonText {
+    display: inline-block;
+    color: rgb(125, 125, 125);
+    font-size: 14px;
+    font-family: Karla, sans-serif;
+    font-weight: normal;
+    line-height: 140%;
+    letter-spacing: 0px;
+    margin: 0;
+}
+.blueButton {
+    width: 100%;
+    margin-bottom: 24px;
+    background-color: rgb(63, 116, 148);
+    color: #FFFFFF;
+    padding: 16px 40px;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: "Karla",sans-serif;
+    font-weight: 700;
+    line-height: 120%;
+    border-radius: 4px;
+    border: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: 0.2s;
+}
+.blueButton:hover {
+    background-color: rgb(131, 194, 214)
+}
+.blueLink {
+    color: rgb(63, 116, 148);
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Karla", sans-serif;
+}
+.blueLink:hover {
+    color: rgb(131, 194, 214)
+}
+.blueLink2 {
+    display: inline-block;
+    color: rgb(63, 116, 148);
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    font-family: sans-serif;
+}
+.blueLink2:hover {
+    text-decoration: underline;
+}
+.charMinDiv {
+    margin-right: 14px;
+    margin-top: 3px;
+    color: #7D7D7D;
+    font-size: 14px;
+    text-align: left;
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+}
+.form-group {
+    margin-bottom: 8px;
+}
+.form-group input {
+    padding: 26px 16px 25px 16px;
+    border: 1px solid rgb(125, 125, 125);
+    color: black;
+    width: calc(100% - 32px);
+    height: 1.1876em;
+    margin: 0;
+    display: block;
+    font-size: 16px;
+    background: none;
+    box-sizing: content-box;
+    letter-spacing: inherit;
+    font-family: "Karla",sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    outline: 0;
+    -webkit-appearance:none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    transition: 0.2s;
+}
+.form-group input:focus {
+    outline: 0;
+    -webkit-appearance:none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 1px solid rgb(63, 116, 148);
+    background: rgb(232, 240, 254);
+    color: black;
+}
+.form-group input::placeholder {
+    color: #323232;
+}
+
+.selectDuration {
+    padding-left: 58px;
+}
+
+.editDuration {
+    margin: 0;
+    padding-left: 60px;
+    color: rgb(63, 116, 148);
+    font-weight: 700;
+    font-size: 14px;
+    font-family: sans-serif;
+    outline: 0;
+}
+
+.editDuration:hover {
+    color: rgb(131, 194, 214);
+    outline: 0;
+}
+
+.confirm-duration-button {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.select-duration-dropdown {
+    position: relative;
+    margin-top: 3px;
+}
+
+.select-duration-dropdown .select-duration-list {
+    width: 100%;
+    padding: 37px 32px 11px 16px;
+    outline: none;
+    color: rgb(22, 22, 22);
+    margin-bottom: 16px;
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 4px;
+    font-family: Arial;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.select-duration-dropdown .select-duration-list:hover {
+    border: 1px solid rgb(63, 116, 148);
+}
+
+.select-duration-dropdown p {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    font-weight: 700;
+    font-size: 14px;
+    transform: translate(16px,12px);
+    font-family: sans-serif;
+    color: rgb(22, 22, 22);
+    line-height: 140%;
+    pointer-events: none;
+}
+
+.select-duration-dropdown svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 16px;
+    bottom: 34px;
+    display: block;
+    fill: rgb(125, 125, 125);
+    pointer-events: none;
+}
+
+.toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
+.toggle.ios .toggle-handle { border-radius: 20rem; }
+
+.Toggler label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+    padding-left: 10px;
+    width: calc(100% - 52px);
+}
+
+.Toggler label p {
+    color: rgb(22, 22, 22);
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+.Toggler label h5 {
+    color: rgb(125, 125, 125);
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 140%;
+    letter-spacing: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* The customcheck */
+.customcheck {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.customcheck input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark2 {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.customcheck:hover input ~ .checkmark2 {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.customcheck input:checked ~ .checkmark2 {
+    background-color: #3ea39a;
+    border-radius: 5px;
+}
+
+/* Create the checkmark2/indicator (hidden when not checked) */
+.checkmark2:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark2 when checked */
+.customcheck input:checked ~ .checkmark2:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.customcheck .checkmark2:after {
+    left: 9px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#wordsets p {
+    color: rgb(22, 22, 22);
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0px;
+}
+
+progress {
+    background-color: #ededed;
+    color: #3ea39a;
+    border: 0;
+    width: 100%;
+    height: 20px;
+    /*border-radius: 8px;*/
+    margin-bottom: 8px;
+}
+progress::-webkit-progress-value { 
+    /*border-radius:8px;*/
+    background: #3ea39a;
+}
+progress::-webkit-progress-bar {
+	/*border-radius: 8px;*/
+}
+
+.goal-label {
+    padding: 4px;
+    padding-bottom: 8px;
+    font-size:16px;
+    font-weight: bold
+}

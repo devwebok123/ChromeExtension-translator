@@ -1,0 +1,156 @@
+{
+  "locale": {
+    "message": "pt"
+  },
+  "appName": {
+    "message": "Kiwi"
+  },
+  "appDesc": {
+    "message": "Aprenda inglês apenas navegando pela internet"
+  },
+  "popupLess": {
+    "message": "Menos"
+  },
+  "popupLessDesc": {
+    "message": "Infrequente e sutil"
+  },
+  "popupMore": {
+    "message": "Mais"
+  },
+  "popupMoreDesc": {
+    "message": "Frequente e óbvio"
+  },
+  "popupMany": {
+    "message": "Muitas"
+  },
+  "popupManyDesc": {
+    "message": "Claro e abundante"
+  },
+  "accessSettings": {
+    "message": "Inscreva-se ou faça login para acessar suas configurações."
+  },
+  "allowAccessText1": {
+    "message": "Permissões adicionais são necessárias para o Kiwi para trabalhar na web."
+  },
+  "allowAccessText2": {
+    "message": "Verifique todas as janelas do navegador abertas para o prompt depois de clicar no link abaixo."
+  },
+  "saveProgress": {
+    "message": "Salve seu progresso gratuitamente"
+  },
+  "registerOrLogin": {
+    "message": "Crie uma conta para salvar e <b>personalizar seu progresso de aprendizagem</b> ou faça o login para continuar aprendendo."
+  },
+  "registerText": {
+    "message": "Crie uma conta para salvar e <b>personalizar seu progresso de aprendizagem</b>."
+  },
+  "loginText": {
+    "message": "Faça o login para continuar aprendendo."
+  },
+  "registerButton": {
+    "message": "CRIAR CONTA"
+  },
+  "minimumPassword": {
+    "message": "A senha deve ter no mínimo 8 caracteres"
+  },
+  "loginButtonText": {
+    "message": "Já tem uma conta? "
+  },
+  "loginButtonLink": {
+    "message": "Entrar"
+  },
+  "forgotPassLink": {
+    "message": "Esqueceu sua senha?"
+  },
+  "nameLabel": {
+    "message": "Nome"
+  },
+  "passwordLabel": {
+    "message": "Senha"
+  },
+  "welcomeBack": {
+    "message": "Bem-vindo de volta!"
+  },
+  "undefinedError": {
+    "message": "Erro indefinido"
+  },
+  "allowedOn": {
+    "message": "Permitido em"
+  },
+  "back": {
+    "message": "Voltar"
+  },
+  "siteEnabledDescription": {
+    "message": "As traduções aparecem neste site."
+  },
+  "googleAuthButton": {
+    // "message": "Faça login com google" <-- the message is too long and the button goes to second line
+    "message": "CONTINUAR COM O GOOGLE"
+  },
+  "isOn": {
+    "message": "ligado"
+  },
+  "isOff": {
+    "message": "desligado por"
+  },
+  "minutes": {
+    "message": "minutos"
+  },
+  "editDuration": {
+    "message": "Editar duração"
+  },
+  "selectDuration": {
+    "message": "Selecione a duração"
+  },
+  "forever": {
+    "message": "Para sempre"
+  },
+  "confirm": {
+    "message": "confirme"
+  },
+  "needTurnOff": {
+    "message": "Precisa desligar todas as traduções? Experimente desativar o Kiwi."
+  },
+  "allow_access": {
+    "message": "Permitir acesso"
+  },
+  "newPasswordSended": {
+    "message": "Uma nova senha foi enviada para o seu e-mail"
+  },
+  "passwordRecovery": {
+    "message": "Recuperação de senha"
+  },
+  "recover": {
+    "message": "Restaurar"
+  },
+  "translationsNumber": {
+    "message": "Número de traduções"
+  },
+  "dashboard": {
+    "message": "Painel"
+  },
+  "feedback": {
+    "message": "Fale conosco"
+  },
+  "IKnowThis": {
+    "message": "Eu sei isso"
+  },
+  "highlightEnabled": {
+    "message": "Destaque ativado"
+  },
+  "wordSets": {
+    "message": "Conjuntos de palavras"
+  },
+  "today_goal": {
+    "message": "Objetivo de hoje"
+  },
+  "words": {
+    "message": "palavras"
+  },
+  "to_english": {
+    "message": "Para inglês"
+  },
+  "translating": {
+    "message": "Traduzir..."
+  }
+}

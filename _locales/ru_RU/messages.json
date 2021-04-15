@@ -1,0 +1,137 @@
+{
+  "locale": {
+    "message": "ru"
+  },
+  "appName": {
+    "message": "Kiwi"
+  },
+  "appDesc": {
+    "message": "Изучайте английский во время просмотра веб сайтов"
+  },
+  "popupLess" : {
+    "message": "Меньше"
+  },
+  "popupLessDesc" : {
+    "message": "Нечасто и незаметно"
+  },
+  "popupMore" : {
+    "message": "Больше"
+  },
+  "popupMoreDesc" : {
+    "message": "Частые и очевидные"
+  },
+  "popupMany" : {
+    "message": "Много"
+  },
+  "popupManyDesc" : {
+    "message": "Ясный и обильный"
+  },
+  "accessSettings" : {
+    "message": "Зарегистрируйтесь или войдите, чтобы получить доступ к своим настройкам."
+  },
+  "allowAccessText1" : {
+    "message": "Для работы Kiwi в сети требуются дополнительные разрешения."
+  },
+  "allowAccessText2" : {
+    "message": "После нажатия на ссылку ниже проверьте все открытые окна браузера на наличие запроса."
+  },
+  "saveProgress" : {
+    "message": "Сохраните свой прогресс бесплатно"
+  },
+  "registerOrLogin" : {
+    "message": "Создайте учетную запись, чтобы сохранять и <b>персонализировать прогресс в обучении</b>, или войдите в систему, чтобы продолжить обучение."
+  },
+  "registerText" : {
+    "message": "Создайте учетную запись, чтобы сохранять и <b>персонализировать свой прогресс в обучении</b>."
+  },
+  "loginText" : {
+    "message": "Войдите в систему, чтобы продолжить обучение."
+  },
+  "registerButton": {
+    "message": "Зарегистрироваться"
+  },
+  "minimumPassword": {
+    "message": "Минимальный пароль 8 символов"
+  },
+  "loginButtonText": {
+    "message": "Уже есть аккаунт? "
+  },
+  "loginButtonLink": {
+    "message": "Войти"
+  },
+  "forgotPassLink": {
+    "message": "Забыли пароль?"
+  },
+  "nameLabel": {
+    "message": "Имя"
+  },
+  "passwordLabel": {
+    "message": "Пароль"
+  },
+  "welcomeBack": {
+    "message": "Добро пожаловать!"
+  },
+  "undefinedError": {
+    "message": "Неизвестная ошибка"
+  },
+  "allowedOn": {
+    "message": "Разрешено на"
+  },
+  "back": {
+    "message": "&lt; Назад"
+  },
+  "siteEnabledDescription": {
+    "message": "Запретить переводы на этом сайте."
+  },
+  "googleAuthButton": {
+    "message": "Войти через google"
+  },
+  "isOn": {
+    "message": "включён"
+  },
+  "isOff": {
+    "message": "выключен"
+  },
+  "minutes": {
+    "message": "минут"
+  },
+  "editDuration": {
+    "message": "Изменить продолжительность"
+  },
+  "selectDuration": {
+    "message": "Выбрать продолжительность"
+  },
+  "forever": {
+    "message": "Навсегда"
+  },
+  "confirm": {
+    "message": "подтвердить"
+  },
+  "needTurnOff": {
+    "message": "Необходимо отключить перевод ненадолго? Попробуйте выключить Kiwi."
+  },
+  "allow_access": {
+    "message": "Разрешить доступ"
+  },
+  "newPasswordSended": {
+    "message": "На Вашу почту отправлен новый пароль"
+  },
+  "passwordRecovery": {
+    "message": "Восстановление пароля"
+  },
+  "recover": {
+    "message": "Восстановить"
+  },
+  "translationsNumber": {
+    "message": "Количество переводов"
+  },
+  "dashboard": {
+    "message": "Dashboard"
+  },
+  "feedback": {
+    "message": "Feedback"
+  },
+  "IKnowThis": {
+    "message": "Я это знаю"
+  }
+}

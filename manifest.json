@@ -1,0 +1,49 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "pt_PT",
+  "version": "1.1.0",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "js/jquery-3.5.1.min.js",
+      "js/background.js"
+    ]
+  },
+  "content_security_policy": "script-src 'self' https://connect.facebook.net; object-src 'self'",
+  "content_scripts": [ {
+    "js": [
+      "js/jquery-3.5.1.min.js",
+      "js/jquery-ui.js",
+      "js/bootstrap.bundle.min.js",
+      "js/content.js"
+    ],
+    "css": [
+      "css/content.css"
+    ],
+    "matches": [ "<all_urls>" ],
+    "run_at": "document_start"
+  }, {
+    "js": ["js/selection.js"],
+    "css": ["css/selection.css"],
+    "matches": [ "<all_urls>" ],
+    "run_at": "document_end"
+  } ],
+  "browser_action" : {
+      "default_title": "Kiwi",
+      "default_popup": "popup.html",
+      "default_icon": "image/logo_48.png"
+  },
+  "web_accessible_resources": [
+    "image/*.*",
+    "popup.html",
+    "js/mixpanel-2-latest.min.js",
+    "http://packs.shtooka.net/eng-wcp-us/ogg/*.*"
+  ],
+  "icons": { "16": "image/logo_16.png",
+    "48": "image/logo_48.png",
+    "128": "image/logo_128.png" }
+}
